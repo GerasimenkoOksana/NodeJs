@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("public"));  //установить he directories for the static files
+app.use(express.static("public"));  //установить the directories for the static files
 const controller = require("./controllers/simpleController");
 app.route("/1")
     .get(controller.get)
