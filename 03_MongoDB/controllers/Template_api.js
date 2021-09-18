@@ -27,5 +27,11 @@ exports.put = function (req, res){
 
 //Delete =>DELETE
 exports.delete = function (req,res){
-
+    model.findByIdAndDelete(
+        req.body._id,
+        {},
+        function (err){
+            if(err) res.send(err);
+            res.sendStatus(200);
+        })
 }
