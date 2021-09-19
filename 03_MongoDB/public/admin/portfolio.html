@@ -197,22 +197,93 @@
                     <h1 class="h3 mb-0 text-gray-800">Portfolios</h1>
                 </div>
 
-                <!-- Content Row -->
+                <!-- Button Create -->
                 <div class="row">
-
+                    <button class="btn btn-primary btn-icon-split btn-lg" id="btnCreateArea">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-flag"></i>
+                        </span>
+                        <span class="text">Create New</span>
+                    </button>
 
                 </div>
-                <div class="row">
+                <!-- Area Create -->
+                <div class="row" id="areaCreate" style="display: none; justify-content: center" >
+                    <div class="card o-hidden border-0 shadow-lg my-5" style = "width: 80%; margin-left: 10%">
+                        <div class="card-body p-0">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create portfolio</h1>
+                            </div>
+                            <form class="user" name="newPortfolioForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="inputName" placeholder="Name Portfolio">
+                            </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="author" id="inputAuthor" placeholder="Author Portfolio">
+                                </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="description" id="inputDescription" placeholder="Description"></textarea>
+                            </div>
 
+                            <hr class="sidebar-divider my-0">
+                             <button class="btn btn-secondary" type="button" id="btnCancelCreate">Cancel</button>
+                            <button class="btn btn-secondary" type="button" id="btnCreate">Create</button>
+                            </form>
+                        </div>
+                    </div>
 
                 </div>
+                <!-- Area Edit -->
+                <div class="row" id="areaEdit" style="display: none; justify-content: center">
+                    <div class="card o-hidden border-0 shadow-lg my-5" style = "width: 80%; margin-left: 10%">
+                        <div class="card-body p-0">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create portfolio</h1>
+                            </div>
+                            <form class="user" name="editPortfolioForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="editName" placeholder="Name Portfolio">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="author" id="editAuthor" placeholder="Author Portfolio">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="description" id="editDescription" placeholder="Description"></textarea>
+                                </div>
 
-                <!-- Content Row -->
+                                <hr class="sidebar-divider my-0">
+                                <button class="btn btn-secondary" type="button" id="btnCancelEdit">Cancel</button>
+                                <button class="btn btn-secondary" type="button" id="btnEdit">Save</button>
+                            </form>
+                        </div>
+                    </div>
 
-
+                </div>
+                <!-- Area AllPortfolios -->
+                <div class="row" id="allPortfolios" style="display: block">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">All portfolios</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Author</th>
+                                        <th style="text-align: center">Count of works</th>
+                                        <th style="text-align: center">Edit</th>
+                                        <th style="text-align: center">Delete</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id = "tableBody"> </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- /.container-fluid -->
-
         </div>
         <!-- End of Main Content -->
 
@@ -257,6 +328,7 @@
     </div>
 </div>
 
+
 <!-- Bootstrap core JavaScript-->
 <script src="/admin/adminDashboard/vendor/jquery/jquery.min.js"></script>
 <script src="/admin/adminDashboard/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -269,10 +341,7 @@
 
 <!-- Page level plugins -->
 <script src="/admin/adminDashboard/vendor/chart.js/Chart.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="/admin/adminDashboard/js/demo/chart-area-demo.js"></script>
-<script src="/admin/adminDashboard/js/demo/chart-pie-demo.js"></script>
+<script src="/JS/portfolioCRUD.js"></script>
 
 </body>
 

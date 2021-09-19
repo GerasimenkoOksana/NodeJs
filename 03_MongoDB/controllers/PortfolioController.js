@@ -25,21 +25,20 @@ exports.get = function (req, res){
 
 //Update => PUT
 exports.put = function (req, res){
+    const portfolio = new model(req.body.element);
     model.findByIdAndUpdate(
         req.body._id,
-        element,
+        req.body.element,
         {},
         function (err, result){
             if(err) {console.log(err);res.send(err);}
-            res.send(result);
+            return res.json(portfolio);
         }
     )
 }
 
 //Delete =>DELETE
 exports.delete = function (req,res){
-    console.log(req.body._id);
-    console.log("status Delete");
     model.findByIdAndDelete(
         req.body._id,
         {},

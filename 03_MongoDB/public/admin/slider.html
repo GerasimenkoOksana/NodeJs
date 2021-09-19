@@ -56,13 +56,13 @@ function sendDel(){
         .catch(err => {if (err) console.log(err);});
 
 }
-    function loadSliders() {
+function loadSliders() {
         fetch("/api/slider")
             .then(res => res.json())
             .then(json => {elements = json; buildList();})
             .catch(err => {if (err) console.log(err);});
-    }
-    loadSliders();
+}
+loadSliders();
 
 
     document.getElementById("btnSend").onclick = function () {
