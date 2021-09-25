@@ -1,0 +1,17 @@
+.img_upload{
+    width: 70px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.spanFileUpload{
+    margin-right: 30px;
+}
+
+.containerFilesUpload{
+    height: 100px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

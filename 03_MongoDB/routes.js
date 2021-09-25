@@ -13,4 +13,8 @@ router.post("/api/portfolio",cPortfolio.post);
 router.delete("/api/portfolio",cPortfolio.delete);
 router.put("/api/portfolio",cPortfolio.put);
 
+const cMedia = require("./controllers/mediaController");
+router.post("/api/media", cMedia.post);
+router.delete("/api/media", cMedia.del);
+
 module.exports = router;

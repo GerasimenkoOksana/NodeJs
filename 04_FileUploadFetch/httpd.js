@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 
+//установить the directories for the static files
+app.use(express.static("public"));
+
 //подключить загрузку файлов
 const multer = require('multer');
 app.use(multer(
     {dest: "public/uploads"})
-    .single("fileData")); //имя поля из формы
-
-//установить the directories for the static files
-app.use(express.static("public"));
+    .single("fileData")); //имя пол\я из формы
 
 //настроим модуль для разборки запросов
 const bodyParser = require("body-parser");

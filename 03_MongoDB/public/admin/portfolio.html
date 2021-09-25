@@ -14,6 +14,8 @@
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
     <link href="/admin/adminDashboard/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/admin/adminDashboard/css/mystyle.css" rel="stylesheet">
+
 
 </head>
 
@@ -214,20 +216,26 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create portfolio</h1>
                             </div>
-                            <form class="user" name="newPortfolioForm">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="name" id="inputName" placeholder="Name Portfolio">
-                            </div>
+                            <form class="user" name="newPortfolioForm" id="newPortfolioForm">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="inputName" placeholder="Name Portfolio">
+                                </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control" name="author" id="inputAuthor" placeholder="Author Portfolio">
                                 </div>
-                            <div class="form-group">
-                                <textarea class="form-control" name="description" id="inputDescription" placeholder="Description"></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="description" id="inputDescription" placeholder="Description"></textarea>
+                                </div>
+                                <section class="form-group" id="formFiles">
+                                    <div class="form-control containerFilesUpload" id="divImages"> </div>
+                                    <input type="file" id="fileData" name="fileData" title = " " accept="image/*,image/jpeg">
 
-                            <hr class="sidebar-divider my-0">
-                             <button class="btn btn-secondary" type="button" id="btnCancelCreate">Cancel</button>
-                            <button class="btn btn-secondary" type="button" id="btnCreate">Create</button>
+                                </section>
+
+                                <div class="form-group" style="text-align: center">
+                                <button class="btn btn-secondary" type="button" id="btnCancelCreate">Cancel</button>
+                                <button class="btn btn-secondary" type="button" id="btnCreate">Create</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -238,7 +246,7 @@
                     <div class="card o-hidden border-0 shadow-lg my-5" style = "width: 80%; margin-left: 10%">
                         <div class="card-body p-0">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create portfolio</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Edit portfolio</h1>
                             </div>
                             <form class="user" name="editPortfolioForm">
                                 <div class="form-group">
