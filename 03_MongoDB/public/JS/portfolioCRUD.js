@@ -1,3 +1,4 @@
+//const fs = require("fs");
 let portfoliosList = [];
 //read
 function LoadPortfolios(){
@@ -89,6 +90,10 @@ btnCreatePortfolio.onclick = function (){
         .catch(err => {if (err) console.log(err);});
     let areaCreateModal = document.getElementById("areaCreate");
     areaCreateModal.style.display='none';
+    for(let i=0; i<newPortfolio.works.length; i++){
+        saveImageMongoB(newPortfolio.works[i]);
+        deleteFromUploads(newPortfolio.works[i]);
+    }
 }
 
 //очистка формы для создания портфолио
@@ -175,6 +180,19 @@ function editPortfolio(){
     document.getElementById("btnCancelEdit").onclick = function () {
         areaEdit.style.display = 'none';
     }
+
+ //получение картинок из монго
+    for(let i=0; i<portfoliosList[index].works.length; i++){
+        fetch("/api/image/name="+portfoliosList[index].works[i])
+            .then (res => res.json())
+            .then(json => {console.log(json); addImageForEditForm(json)})
+            .catch(err => {if (err) console.log(err);});
+    }
+
+
+
+
+
     let id = this.id;
    document.getElementById("btnEdit").onclick = function () {
        let form = document.forms.editPortfolioForm;
@@ -200,6 +218,30 @@ function editPortfolio(){
    }
 }
 
+function addImageForEditForm(imgUrl){
+    console.log(imgUrl)
+
+    let divImages = document.getElementById("divImagesEdit");
+    let img = document.createElement("img");
+    img.className="img_upload";
+    img.src = imgUrl;
+    let span = document.createElement("div");
+    span.className="spanFileUpload";
+    span.appendChild(img);
+    let delImg = document.createElement("button");
+    delImg.className = "btn btn-danger btn-sm";
+    delImg.innerText="X"
+    delImg.id = imgUrl;
+    span.appendChild(delImg);
+    delImg.onclick = function (){
+        files.splice(files.indexOf(imgUrl), 1);
+        buildDivImages();
+        deleteFromUploads(imgUrl);
+    };
+    divImages.appendChild(span);
+}
+
+
 function delPortfolio(){
     fetch("/api/portfolio",{
         method: "delete",
@@ -213,4 +255,15 @@ function delPortfolio(){
             }else console.log(res);
         })
         .catch(err => {if (err) console.log(err)})
+}
+
+function saveImageMongoB(imgUrl){
+    let newImage = {};
+    newImage.name= imgUrl;
+    fetch("/api/image",{
+        method: "post",
+        body: JSON.stringify(newImage),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    .catch(err => {if (err) console.log(err);});
 }

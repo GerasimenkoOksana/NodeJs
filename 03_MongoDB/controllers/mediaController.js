@@ -18,7 +18,6 @@ exports.post = function (req, res) {
 };
 
 exports.del = function (req,res){
-    console.log("qqq-"+req.body.img);
    fs.unlink("./public"+req.body.img,
         function (err){
             if(err) {console.log(err);res.send(err);}

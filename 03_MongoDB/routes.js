@@ -17,4 +17,10 @@ const cMedia = require("./controllers/mediaController");
 router.post("/api/media", cMedia.post);
 router.delete("/api/media", cMedia.del);
 
+const cImage = require("./controllers/imageController");
+router.get("/api/image",cImage.get);
+//router.get("/api/image",cImage.get);
+router.post("/api/image",cImage.post);
+router.delete("/api/image",cImage.delete);
+
 module.exports = router;
