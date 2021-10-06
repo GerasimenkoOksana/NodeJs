@@ -48,4 +48,33 @@ body{
 }
 .cardBook{
     width: 18rem;
+    height: 18rem;
+    position: relative;
+}
+.card-text1{
+    font-size: small;
+    min-width: 100%;
+
+}
+.btnBook{
+    margin:5px;
+    position: absolute;
+    bottom:0px;
+
+}
+.imgBook{
+    height: 50%;
+}
+.btnBookItem{
+    margin-right: 5px;
+}
+.textareaDes{
+    width: 100%;
+    box-sizing: border-box;
+    height: 50%;
+}
+.textareaTitle{
+    width: 100%;
+    box-sizing: border-box;
+    height: 15%;
 }

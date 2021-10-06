@@ -4,6 +4,7 @@ class Book extends React.Component {
         this.state = {
             isLoaded: true,
             isEdit: false,
+            isDetails: false,
             error: null,
             item: props.item
         }
@@ -31,7 +32,13 @@ class Book extends React.Component {
         }
         this.setState({isEdit: true});
     }
+openDetailsForm(){
+    this.setState({isDetails: true});
 
+}
+    cancelDetailsForm(){
+        this.setState({isDetails: false});
+    }
     cancelEditForm(){
         this.setState({
             isEdit:false,
@@ -51,11 +58,18 @@ class Book extends React.Component {
     delete(){
         this.props.delete(this.props.item);
     }
+addImage(){
+
+    this.setState({
+        isEdit:true})
+}
+
 
     render(){
         if(this.state.error) return this.renderError();
         if(this.state.item == null) return this.renderNewElement();
         if(this.state.isEdit) return this.renderForm();
+        if (this.state.isDetails) return this.renderDetailsForm();
         return this.renderData();
     }
     renderNewElement(){
@@ -65,15 +79,28 @@ class Book extends React.Component {
             </div>
         );
     }
+    renderDetailsForm(){
+        return (
+            <div className="card cardBook" key="CreateNewElement">
+                <div className="card-body card-text1">
+                    <input name="_id" type="hidden" value={this.state.item._id}/>
+                    <textarea className="textareaTitle" name="author" type="text" readOnly value={this.state.item.author} onChange={this.onChange.bind(this)}/><br/>
+                    <textarea className="textareaTitle" name="title" type="text" readOnly value={this.state.item.title} onChange={this.onChange.bind(this)}/><br/>
+                    <textarea className="textareaDes" name="description" type="text" readOnly value={this.state.item.description} onChange={this.onChange.bind(this)}/><br/>
+                    <input type="button" value="Cancel" onClick={this.cancelDetailsForm.bind(this)}/>
+                </div>
+            </div>
+        )
+    }
     renderForm(){
         return (
             <div className="card cardBook" key="CreateNewElement">
-                <div className="card-body">
+                <div className="card-body card-text1">
                     <input name="_id" type="hidden" value={this.state.item._id}/>
-                    <input name="title" type="text" value={this.state.item.title} onChange={this.onChange.bind(this)}/><br/>
-                    <input name="author" type="text" value={this.state.item.author} onChange={this.onChange.bind(this)}/><br/>
-                    <input name="description" type="text" value={this.state.item.description} onChange={this.onChange.bind(this)}/><br/>
-
+                    <textarea className="textareaTitle" name="author" type="text" placeholder="author" value={this.state.item.author} onChange={this.onChange.bind(this)}/><br/>
+                    <textarea className="textareaTitle" name="title" type="text" placeholder="title" value={this.state.item.title} onChange={this.onChange.bind(this)}/><br/>
+                    <textarea className="textareaDes" name="description" type="text" placeholder="description" value={this.state.item.description} onChange={this.onChange.bind(this)}/><br/>
+                    <input type="file" id="fileData" name="fileData" onClick={this.addImage.bind(this)}/>
                     <input type="button" value="Cancel" onClick={this.cancelEditForm.bind(this)}/>
                     <input type="button" value="Save" onClick={this.saveEditForm.bind(this)}/>
                 </div>
@@ -83,16 +110,20 @@ class Book extends React.Component {
 
     // Вывод основного состояния компонента
     renderData(){
+        console.log(this.state.item);
         return (
             <div className="card cardBook" key={this.state.item._id}>
-                <img src="" className="card-img-top" alt="тут будет фото обложки"/>
+                <img src="" className="card-img-top imgBook" alt="тут будет фото обложки"/>
                     <div className="card-body">
-                        <h6 className="card-title">{this.state.author}</h6>
-                        <h5 className="card-title">{this.state.title}</h5>
-                        <p className="card-text">{this.state.description}</p>
-                        <button className="btn btn-primary" name="btnDetails">Details</button>
-                        <input type="button" value="edit" onClick={this.openEditForm.bind(this)}/>
-                        <input type="button" value="delete" onClick={this.delete.bind(this)} />
+                        <h6 className="card-title">{this.state.item.author}</h6>
+                        <h5 className="card-title">{this.state.item.title}</h5>
+
+                        <div className="btnBook">
+                            <button className="btn btn-primary btnBookItem" name="btnDetails" onClick={this.openDetailsForm.bind(this)}>Details</button>
+                            <input className="btn btn-primary btnBookItem" type="button" value="edit" onClick={this.openEditForm.bind(this)}/>
+                            <input className="btn btn-primary btnBookItem" type="button" value="delete" onClick={this.delete.bind(this)} />
+                        </div>
+
                     </div>
             </div>
         );
