@@ -22,6 +22,15 @@ exports.get = function (req, res){
             res.json(data);
         });
 }
+exports.getToMe = function (req, res){
+    console.log("Get start");
+    model.find({},
+        function (err, data){
+            if (err) {console.log(err); return;}
+            res.json(data);
+        });
+}
+
 
 //Update => PUT
 exports.put = function (req, res){

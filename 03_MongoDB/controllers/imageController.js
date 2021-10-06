@@ -5,7 +5,8 @@ const model = require("../models/image");
 exports.post = function(req, res) {
     const element = new model;
     element.name = req.body.name;
-    element.data = fs.readFileSync("C://Users//BOSS//PhpstormProjects//NodeJs//03_MongoDb//public"+req.body.name);
+    console.log("dirname:" +__dirname);
+    element.data = fs.readFileSync(".."+req.body.name);
     console.log(req.body);
     element.save(function (err) {
         if (err) {

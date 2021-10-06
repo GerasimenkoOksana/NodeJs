@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="mystyle.css" rel="stylesheet">
+    <title>Library</title>
+</head>
+<body>
+    <header class="header">LIBRARY</header>
+    <div class="menu">
+        <div class="menuItem">BOOKS</div>
+    </div>
+    <main class="main">
+        <div class="myContainer">
+            <div id="app"></div>
+        </div>
+    </main>
+
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<!-- React. -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+
+<!-- компоненты-->
+<script src="/components/book.jsx" type="text/babel"></script>
+<script src="/components/bookList.jsx" type="text/babel"></script>
+<script type="text/babel">
+    ReactDOM.render(
+        <BookList />,
+        document.getElementById("app")
+    )
+</script>
+
+</body>
+</html>
