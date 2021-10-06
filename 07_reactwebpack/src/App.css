@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.np{
+  margin-bottom:20px;
+  margin-top: 20px;
+}
+
+
+.footer{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:10%;
+  width:100%;
+}

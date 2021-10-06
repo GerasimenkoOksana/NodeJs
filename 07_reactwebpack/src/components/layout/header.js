@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import NpContainer from "../novaposhta/npContainer";
+
 
 export  default  class Header extends React.Component{
     render(){
@@ -10,8 +10,8 @@ export  default  class Header extends React.Component{
                     <li> <Link to="/">Home</Link></li>
                     <li> <Link to="/np">Nova Poshta</Link></li>
 
-                    {/*неправильный подход при наличии компонентов  */ }
-                    <li> <a href ="/np">Nova Poshta перегрузка страницы</a></li>
+                    {/*неправильный подход при наличии компонентов
+                    <li> <a href ="/np">Nova Poshta перегрузка страницы</a></li>*/ }
                 </ul>
             </nav>
         )

@@ -1,112 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db277196-6e43-49ff-82b5-63587c6de334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../05_Library/controllers/bookController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/httpd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/models/book.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/public/components/book.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/public/components/bookList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/public/mystyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_Library/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../05_React/public/js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/httpd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/models/board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/models/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/models/column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/models/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/models/npAreas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../06_TrelloReact/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/.idea/07_reactwebpack.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/NovaPoshta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/layout/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/layout/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/novaposhta/npAjax.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/novaposhta/npArea.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/novaposhta/npCity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/novaposhta/npContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/novaposhta/npDepartament.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/static/errors/Error404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/components/static/pages/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../07_reactwebpack/src/setupTests.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/controllers/boardController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/controllers/cardController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/controllers/columnController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/controllers/commentController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/controllers/stateController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/httpd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/models/board.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/models/card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/models/column.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/models/comment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../trello_back_end/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/trello_front_end.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/boardHeaderItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/boardList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cardItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cardList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/columnItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/columnList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/static/Error404.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_MongoDB/controllers/PortfolioController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03_MongoDB/controllers/PortfolioController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_MongoDB/controllers/imageController.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03_MongoDB/controllers/imageController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../03_MongoDB/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../03_MongoDB/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_React/models/entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/../05_React/models/entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_React/public/components/entity/entityItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../05_React/public/components/entity/entityItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_React/public/components/entity/entityList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../05_React/public/components/entity/entityList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../05_React/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../05_React/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-    </list>
+    <list default="true" id="db277196-6e43-49ff-82b5-63587c6de334" name="Changes" comment="0510DZ" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,8 +63,16 @@
       <option name="presentableId" value="Default" />
       <updated>1633430289144</updated>
       <workItem from="1633430290395" duration="8120000" />
-      <workItem from="1633503525996" duration="319000" />
+      <workItem from="1633503525996" duration="834000" />
     </task>
+    <task id="LOCAL-00001" summary="0510DZ">
+      <created>1633503919822</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633503919822</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,5 +89,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0510DZ" />
+    <option name="LAST_COMMIT_MESSAGE" value="0510DZ" />
   </component>
 </project>

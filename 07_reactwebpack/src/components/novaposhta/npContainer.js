@@ -4,7 +4,11 @@ import NpArea from "./npArea";
 export default class NpContainer extends React.Component {
     render(){
         return (
-            <NpArea/>
+           <div className="container">
+               <NpArea/>
+
+           </div>
+
         )
     }
 

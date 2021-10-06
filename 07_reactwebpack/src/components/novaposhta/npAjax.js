@@ -14,7 +14,7 @@ export default class NpAjax{
             }
         )
             .then(res => {
-                if (res.status != 200){
+                if (res.status !== 200){
                     console.log(res.status);
                     console.log(res.statusText);
                     if (callBackErr) callBackErr(res.statusText);

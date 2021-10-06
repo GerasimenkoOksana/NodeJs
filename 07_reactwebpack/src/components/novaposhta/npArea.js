@@ -1,5 +1,6 @@
 import React from "react";
 import NpAjax from "./npAjax";
+import NpCity from "./npCity";
 
 export default class NpArea extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ export default class NpArea extends React.Component {
             isEdit: false,
             error: null,
             items: [],
-            activeArea_id: 0 //текущее отделение новой почты
+            activeArea_id: 0 //текущая область
         };
     }
 
@@ -31,7 +32,12 @@ export default class NpArea extends React.Component {
     componentDidMount() {
         this.Get();
     }
+ ChangeActiveArea(e){
 
+        let val = e.target.value;
+        console.log("area_id: " + val);
+        this.setState({activeArea_id:val});
+ }
     render(){
         if(this.state.error) return this.renderError();
         if(!this.state.isLoaded) return this.renderLoading();
@@ -39,14 +45,20 @@ export default class NpArea extends React.Component {
     }
 
     renderData(){
+        let showCity = this.state.activeArea_id !==0 && this.state.activeArea_id !== "0";
         return (
-            <ul>
-                {
-                    this.state.items.map(item =>
-                        <                                                                                                                                                                                                                                                                                         li key = {item.Ref}> {item.DescriptionRu}</li>
-                    )
-                }
-            </ul>
+            <div className="np">
+                <select  className="btn btn-secondary np" onChange={this.ChangeActiveArea.bind(this)} value={this.state.activeArea_id}>
+                    <option  key="newArea" value="0">choose area</option>
+                    {
+                        this.state.items.map(item =>
+                            <option key = {item.Ref} value = {item.Ref}> {item.DescriptionRu}</option>
+                        )
+                    }
+                </select>
+
+                { showCity && <NpCity activeArea_id={this.state.activeArea_id}/>}
+            </div>
         );
     }
 

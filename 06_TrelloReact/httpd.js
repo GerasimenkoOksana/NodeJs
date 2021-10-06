@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 const cors = require("cors");
 app.use(express.static(path.join(__dirname,"public")));
+
 // разрешить запросы с других сайтов
 app.use(cors());
 const multer = require("multer");

@@ -27,8 +27,8 @@ function App() {
                   <Route path="*"> <Error404/> </Route>
               </Switch>
           </main>
+          <div className="footer"> <Footer/>  </div>
 
-          <Footer/>
       </Router>
 
   );

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Welcome to Trello </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <style>
+    </style>
+</head>
+<body>
+
+<div id="app">
+    Тут будет жизнь
+</div>
+
+
+
+<!-- Загрузим React. -->
+<!-- Примечание: при деплое на продакшен замените «development.js» на «production.min.js». -->
+<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<!-- Подключу компоненты -->
+<script src="/components/app.jsx" type="text/babel"></script>
+<script src="/components/trello/boardHeaderItem.jsx" type="text/babel"></script>
+<script src="/components/trello/boardList.jsx" type="text/babel"></script>
+<script src="/components/trello/columnList.jsx" type="text/babel"></script>
+<script src="/components/trello/columnItem.jsx" type="text/babel"></script>
+<script src="/components/trello/cardItem.jsx" type="text/babel"></script>
+<script src="/components/trello/cardList.jsx" type="text/babel"></script>
+
+
+<script type="text/babel">
+    ReactDOM.render(
+        <App />,
+        document.getElementById("app")
+    )
+</script>
+
+
+
+
+</body>
+</html>
