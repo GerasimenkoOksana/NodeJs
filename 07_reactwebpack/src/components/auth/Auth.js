@@ -90,7 +90,27 @@ export default class Auth extends React.Component {
     }
 
     tryLogin(){
-
+        fetch(
+            "http://localhost:3030/api/auth/login",
+            {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(this.state.user)
+            }
+        )
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(response.status);
+                    console.log(response.statusText);
+                }
+                return response.json();
+            })
+            .then(json => {
+                console.log(json);
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
 
