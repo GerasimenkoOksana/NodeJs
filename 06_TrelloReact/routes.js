@@ -28,5 +28,10 @@ router.post("/api/comment", cComment.post);
 router.put("/api/comment", cComment.put);
 router.delete("/api/comment", cComment.delete);
 
+const cAuth = require("./controllers/Auth/authController");
+router.get("/api/auth/checkEmail:email", cAuth.checkEmail);
+router.post("/api/auth/register", cAuth.register);
+router.post("/api/auth/login", cAuth.tryLogin);
+
 
 module.exports = router;
